@@ -2,18 +2,20 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 
+// main
 fn main() {
-    println!("Guess the number!");
+    println!("Guess the number!"); // Macro
 
-    let secret_number = rand::rng().random_range(1..=100);
+    let secret_number = rand::rng().random_range(1..=100); // Immutable
 
     // Spoilor!
     // println!("The secret number is: {secret_number}");
 
+    // while(1)
     loop {
         println!("Please input your guess.");
 
-        let mut guess = String::new();
+        let mut guess = String::new(); // String
 
         // User input
         io::stdin()
@@ -25,6 +27,7 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
+        // catch(...) {}
 
         println!("You guessed: {guess}");
 
